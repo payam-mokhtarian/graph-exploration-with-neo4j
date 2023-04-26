@@ -5,9 +5,9 @@ This repository demostraits an overview on tabular data ingestion to Neo4j graph
 The Knowledge Grapgh Game dataset from [KG Game Neo4j]() is used for this exercise. There are four separate tabular datasets as follow:
 
 - [Education](./data/sng_education.csv)
-- [Employment](./data/sng_work.csv)
-- [Travel](./data/sng_trips.csv)
-- [Bank Card Transactions](./data/sng_work.csv)
+- [Work](./data/sng_work.csv)
+- [Trips](./data/sng_trips.csv)
+- [Transactions](./data/sng_transaction.csv)
 
 ## Tabular to Graph Data Modelling
 
