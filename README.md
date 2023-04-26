@@ -1,8 +1,8 @@
 # Graph Exploration with Neo4j
 
-This repository demostraits an overview on tabular data ingestion to Neo4j graph database following some graph analytics and visualition. In addition, it shows how to buid a RESTfull API endpoint to execute Cypher query estatement. In this exercise, we build application based on Neo4j python driver on Neo4j sandbox environment. This exercise can be done locally using Neo4j Desktop.
+This repository demostraits an overview on tabular data ingestion to Neo4j graph database following some graph analytics and visualition. In addition, it shows how to buid a RESTfull API endpoint to execute Cypher query estatement. In this exercise, we build application based on Neo4j python driver on ![Neo4j sandbox](https://sandbox.neo4j.com/) environment. This exercise can be done locally using Neo4j Desktop.
 
-The Knowledge Grapgh Game dataset from [KG Game Neo4j]() is used for this exercise. There are four separate tabular datasets as follow:
+The Knowledge Grapgh Game dataset from [KG Game Neo4j](https://github.com/maruthiprithivi/kg_game_neo4j) is used for this exercise. There are four separate tabular datasets as follow:
 
 - [Education](./data/sng_education.csv)
 - [Work](./data/sng_work.csv)
