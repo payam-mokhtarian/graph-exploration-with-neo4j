@@ -50,13 +50,17 @@ To setup connection from python application to Neo4j sandbox and creation driver
 ```python
 host = "<BOLT_URL>" 
 user = "neo4j" # default
-password = "<PASSWORD>s"  # default generated
+password = "<PASSWORD>"  # default generated
 
 with GraphDatabase.driver(host, auth=(user, password)) as driver:
   driver.verify_connectivity()
 
 session = driver.session(database="neo4j") # default database
 ```
+
+#### Data Ingestion
+Once the python application connects to the sandbox and create deriver, we can execute Cypher queries that load CSV files from the urls to the selected database in the sandbox. The details of creating constraints, index and load statement are in the Graph Ingestion notebook.
+
 
 ## Graph Analytics
 
