@@ -44,6 +44,7 @@ from graphdatascience import GraphDataScience
 from neo4j.exceptions import ServiceUnavailable
 ```
 
+
 ## Graph Analytics
 
 ## RESTfull API to Execute Cypher Queris
