@@ -74,6 +74,8 @@ pip install graphdatascience
 and create deriver:
 
 ```python
+from graphdatascience import GraphDataScience
+
 host = "<BOLT_URL>" 
 user = "neo4j" # default
 password = "<PASSWORD>"  # default generated
