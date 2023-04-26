@@ -19,6 +19,13 @@ We can also export the data model as a JSON file. Here is the exported data mode
 
 ## Data Ingestion to a Graph
 
+To ingest the above CSV files to Neo4j Graph Databse using a python application, there are some prerequisites that need to be setup.
+
+### Neo4j GraphDB abd GraphDS
+To perform this exercise, we need to have Neo4j graph database (GraphDB) abd graph data sciance (GraphDS) on an instance. There are a few ways to set an instance for this purpose; using Neo4j Desktop, Neo4j Sandbos, Neo4j AuraDB and AuraDS. In this exercise, we use Neo4j sandbox. Once a snadbox is set up, it provides Connection Details for remote access as below: 
+
+![Connection Details](./images/connection_details.png)
+
 ## Graph Analytics
 
 ## RESTfull API to Execute Cypher Queris
