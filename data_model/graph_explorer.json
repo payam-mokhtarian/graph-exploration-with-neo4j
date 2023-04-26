@@ -1,0 +1,318 @@
+{
+  "style": {
+    "font-family": "Nunito Sans",
+    "background-color": "#F2F2F2",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#4C8EDA",
+    "border-width": 0,
+    "border-color": "#000000",
+    "radius": 75,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#ffffff",
+    "caption-font-size": 20,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#ffffff",
+    "label-background-color": "#848484",
+    "label-border-color": "#848484",
+    "label-border-width": 3,
+    "label-font-size": 20,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "above",
+    "detail-orientation": "parallel",
+    "arrow-width": 3,
+    "arrow-color": "#848484",
+    "margin-start": 5,
+    "margin-end": 5,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#848484",
+    "type-background-color": "#F2F2F2",
+    "type-border-color": "#848484",
+    "type-border-width": 0,
+    "type-font-size": 21,
+    "type-padding": 5,
+    "property-position": "outside",
+    "property-alignment": "colon",
+    "property-color": "#848484",
+    "property-font-size": 20,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": -425.7397115984277,
+        "y": -478.4317258211332
+      },
+      "caption": "Card",
+      "labels": [
+        "CARD"
+      ],
+      "properties": {
+        "cardnumber": ""
+      },
+      "style": {
+        "node-color": "#fda1ff",
+        "property-font-size": 14
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": -5.100894386693932,
+        "y": -478.4317258211332
+      },
+      "caption": "Person",
+      "style": {
+        "node-color": "#f44e3b",
+        "property-font-size": 14
+      },
+      "labels": [
+        "PERSON"
+      ],
+      "properties": {
+        "name": "",
+        "passportnumber": ""
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -5.100894386693932,
+        "y": -805.6399773948255
+      },
+      "caption": "Organisation",
+      "style": {
+        "node-color": "#68ccca",
+        "property-font-size": 14
+      },
+      "labels": [
+        "ORGANIZATION"
+      ],
+      "properties": {
+        "name": "",
+        "designation": "",
+        "startyear": "",
+        "endyear": ""
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": -425.7397115984277,
+        "y": -129.82704612443686
+      },
+      "caption": "Merchant",
+      "style": {
+        "node-color": "#7b64ff",
+        "property-font-size": 14
+      },
+      "labels": [
+        "MERCHANT"
+      ],
+      "properties": {
+        "name": ""
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": -5.100894386693932,
+        "y": -129.82704612443686
+      },
+      "caption": "Course",
+      "style": {
+        "property-font-size": 14
+      },
+      "labels": [
+        "COURSE"
+      ],
+      "properties": {
+        "name": ""
+      }
+    },
+    {
+      "id": "n5",
+      "position": {
+        "x": 497.7001226042588,
+        "y": -478.4317258211333
+      },
+      "caption": "Country",
+      "style": {
+        "node-color": "#68bc00",
+        "property-font-size": 14
+      },
+      "labels": [
+        "COUNTRY"
+      ],
+      "properties": {
+        "name": ""
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 497.7001226042588,
+        "y": -129.82704612443686
+      },
+      "caption": "Institute",
+      "style": {
+        "node-color": "#009ce0",
+        "property-font-size": 14
+      },
+      "labels": [
+        "INSTITUTION"
+      ],
+      "properties": {
+        "name": ""
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "HAS_CARD",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2
+      },
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n0"
+    },
+    {
+      "id": "n1",
+      "type": "EMPLOYED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2
+      },
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n2"
+    },
+    {
+      "id": "n2",
+      "type": "TRANSACTED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2,
+        "property-font-size": 14,
+        "detail-position": "below"
+      },
+      "properties": {
+        "amount": "",
+        "transactiondate": ""
+      },
+      "fromId": "n0",
+      "toId": "n3"
+    },
+    {
+      "id": "n3",
+      "type": "ENROLLED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2,
+        "property-position": "outside",
+        "property-font-size": 14,
+        "detail-position": "below"
+      },
+      "properties": {
+        "year": ""
+      },
+      "fromId": "n1",
+      "toId": "n4"
+    },
+    {
+      "id": "n4",
+      "type": "GRADUATED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2,
+        "detail-position": "below",
+        "property-font-size": 14
+      },
+      "properties": {
+        "year": ""
+      },
+      "fromId": "n4",
+      "toId": "n1"
+    },
+    {
+      "id": "n6",
+      "type": "CITIZEN",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2
+      },
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n5"
+    },
+    {
+      "id": "n7",
+      "type": "TRAVELLED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2,
+        "property-font-size": 14,
+        "detail-position": "below"
+      },
+      "properties": {
+        "arrivaldate": "",
+        "departuredate": ""
+      },
+      "fromId": "n1",
+      "toId": "n5"
+    },
+    {
+      "id": "n9",
+      "type": "FROM",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2,
+        "detail-position": "above"
+      },
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n5"
+    },
+    {
+      "id": "n11",
+      "type": "FROM",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2
+      },
+      "properties": {},
+      "fromId": "n4",
+      "toId": "n6"
+    },
+    {
+      "id": "n12",
+      "type": "STUDIED",
+      "style": {
+        "type-font-size": 14,
+        "arrow-width": 2
+      },
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n6"
+    }
+  ]
+}
