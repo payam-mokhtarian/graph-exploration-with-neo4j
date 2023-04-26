@@ -31,8 +31,8 @@ To perform this exercise, we need to have Neo4j graph database (GraphDB) abd gra
 #### Python Environment
 Python 3 is required to create an application to enable a graph and connect to the Neo4j sandbox for execution. In this exercise, we use Google Colab Jupyter Notebook for coding and execution. Note that, we can use any other Python environmen and client. The Colab runtime needs some python modules to prepare the environment for connection to sandbxo and execution. Once a Jupyter notebook on Colab connects to runtime and is running,we install Neo4j modules:
 
-```python
-!pip install neo4j graphdatascience
+```bash
+pip install neo4j graphdatascience
 ```
 
 Follwoing the execution of modules import:
@@ -44,6 +44,19 @@ from graphdatascience import GraphDataScience
 from neo4j.exceptions import ServiceUnavailable
 ```
 
+#### Setup Connection and Driver
+To setup connection from python application to Neo4j sandbox and creation driver, we need connection details in the below command:
+
+```python
+host = "<BOLT_URL>" 
+user = "neo4j" # default
+password = "<PASSWORD>s"  # default generated
+
+with GraphDatabase.driver(host, auth=(user, password)) as driver:
+  driver.verify_connectivity()
+
+session = driver.session(database="neo4j") # default database
+```
 
 ## Graph Analytics
 
