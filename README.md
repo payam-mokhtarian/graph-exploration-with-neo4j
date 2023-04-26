@@ -91,7 +91,7 @@ gds.set_database("neo4j")
 ## RESTfull API to Execute Cypher Queris
 Neo4j Developer API provides a series of HTTP edpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the detals to establish a Cypher transaction API:
 
-- **POST** `http://<HOST>:7474/db/<DBNAME>/tx`
+- **POST** `http://{host}:7474/db/{dbname}/tx`
 - **Accept:** `application/json;charset=UTF-8`
 - **Content-Type:** `application/json`
 
