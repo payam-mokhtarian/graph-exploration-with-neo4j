@@ -1,8 +1,8 @@
 # Graph Exploration with Neo4j
 
-This repository demostraits an overview on tabular data ingestion to Neo4j graph database following some graph analytics and visualition. In addition, it shows how to buid a RESTfull API endpoint to execute Cypher query estatement. In this exercise, we build application based on Neo4j python driver on [Neo4j sandbox](https://sandbox.neo4j.com/) environment. This exercise can be done locally using Neo4j Desktop.
+This repository demonstrates an overview on tabular data ingestion to Neo4j graph database following some graph analytics and visualisation. In addition, it shows how to build a RESTfull API endpoint to execute Cypher query statement. In this exercise, we build application based on Neo4j python driver on [Neo4j sandbox](https://sandbox.neo4j.com/) environment. This exercise can be done locally using Neo4j Desktop.
 
-The Knowledge Grapgh Game dataset from [KG Game Neo4j](https://github.com/maruthiprithivi/kg_game_neo4j) repository is used for this exercise. There are four separate tabular datasets as follow:
+The Knowledge Graph Game dataset from [KG Game Neo4j](https://github.com/maruthiprithivi/kg_game_neo4j) repository is used for this exercise. There are four separate tabular datasets as follow:
 
 - [Education](./data/sng_education.csv)
 - [Work](./data/sng_work.csv)
@@ -11,7 +11,7 @@ The Knowledge Grapgh Game dataset from [KG Game Neo4j](https://github.com/maruth
 
 ## Tabular to Graph Data Modelling
 
-The firt step prior to create an ingestion pipeline is to understand data model and relationships. Using the structure and accossation in tabular datasets, we can start creating a visual data model. To create a visual data model, we used [arrows.app](https://arrows.app/). Below is the visual representation of the graph with it's nodes, relationships, and their properties:
+The first step prior to create an ingestion pipeline is to understand data model and relationships. Using the structure and association in tabular datasets, we can start creating a visual data model. To create a visual data model, we used [arrows.app](https://arrows.app/). Below is the visual representation of the graph with it's nodes, relationships, and their properties:
 
 ![Graph Data Model](./data_model/graph_explorer.png)
 
@@ -19,23 +19,23 @@ The details of the visual data model is available in this [link](https://arrows.
 
 ## Data Ingestion to a Graph
 
-To ingest the above CSV files to Neo4j Graph Databse using a python application, there are some prerequisites that need to be setup.
+To ingest the above CSV files to Neo4j Graph Database using a python application, there are some prerequisites that need to be setup.
 
 ### Prerequisites
 
 #### Neo4j GraphDB
-To perform this exercise, we need to have Neo4j graph database (GraphDB) on an instance. There are a few ways to set an instance for this purpose; using Neo4j Desktop, Neo4j Sandbos, Neo4j AuraDB and AuraDS. In this exercise, we use Neo4j sandbox. Once a snadbox is set up, it provides Connection Details for remote access as below: 
+To perform this exercise, we need to have Neo4j graph database (GraphDB) on an instance. There are a few ways to set an instance for this purpose; using Neo4j Desktop, Neo4j Sandbox, Neo4j AuraDB and AuraDS. In this exercise, we use Neo4j sandbox. Once a snadbox is set up, it provides Connection Details for remote access as below: 
 
 ![Connection Details](./images/connection_details.png)
 
 #### Python Environment
-Python 3 is required to create an application to enable a graph and connect to the Neo4j sandbox for execution. In this exercise, we use Google Colab Jupyter Notebook for coding and execution. Note that, we can use any other Python environmen and client. The Colab runtime needs some python modules to prepare the environment for connection to sandbxo and execution. Once a Jupyter notebook on Colab connects to runtime and is running,we install Neo4j modules:
+Python 3 is required to create an application to enable a graph and connect to the Neo4j sandbox for execution. In this exercise, we use Google Colab Jupyter Notebook for coding and execution. Note that, we can use any other Python environment and client. The Colab runtime needs some python modules to prepare the environment for connection to sandbox and execution. Once a Jupyter notebook on Colab connects to runtime and is running, we install Neo4j modules:
 
 ```bash
 pip install neo4j
 ```
 
-Follwoing the execution of modules import:
+Following the execution of modules import:
 
 ```python
 import pandas as pd
@@ -90,8 +90,8 @@ gds.set_database("neo4j")
 ### Visual Analytics
 
 
-## RESTfull API to Execute Cypher Queris
-Neo4j Developer API provides a series of HTTP edpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the detals to establish a Cypher transaction API:
+## RESTfull API to Execute Cypher Queries
+Neo4j Developer API provides a series of HTTP endpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the details to establish a Cypher transaction API:
 
 - **POST** `http://{host}:7474/db/{dbname}/tx`
 - **Accept:** `application/json;charset=UTF-8`
