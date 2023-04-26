@@ -19,9 +19,9 @@ from neo4j.exceptions import ServiceUnavailable
 
 # Neo4j GraphDB instance connection details
 
-host = "bolt://3.236.93.178:7687" #"neo4j+s://8f698c3f.databases.neo4j.io"
+host = ""
 user = "neo4j"
-password = "growth-reservists-curves"  #"8Bb01WjzLpVZ6fDy6W96dZalUGX2JoHQiNC_9vVQ2p8"
+password = ""
 
 # Establish driver and session
 
