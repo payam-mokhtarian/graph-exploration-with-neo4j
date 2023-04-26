@@ -13,9 +13,9 @@ The Knowledge Graph Game dataset from [KG Game Neo4j](https://github.com/maruthi
 
 The first step prior to create an ingestion pipeline is to understand data model and relationships. Using the structure and association in tabular datasets, we can start creating a visual data model. To create a visual data model, we used [arrows.app](https://arrows.app/). Below is the visual representation of the graph with it's nodes, relationships, and their properties:
 
-![Graph Data Model](./data_model/graph_explorer.png)
+![Graph Data Model](./data_model/graph_data_model.png)
 
-The details of the visual data model is available in this [link](https://arrows.app/#/local/id=1Lb2VC1gtOfrXMYKSvf8). We can also export the data model as a JSON file. Here is the exported data model [file](./data_model/graph_exploere.josn) in JSON.
+The details of the visual data model is available in this [link](https://arrows.app/#/local/id=1Lb2VC1gtOfrXMYKSvf8). We can also export the data model as a JSON file. Here is the exported data model [file](./data_model/graph_data_model.josn) in JSON.
 
 ## Data Ingestion to a Graph
 
