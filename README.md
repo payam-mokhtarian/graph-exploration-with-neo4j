@@ -123,11 +123,11 @@ The expected result given `200: OK` response looks like:
     } ]
   } ],
   "errors" : [ ],
-  "commit" : "http://{HOST}:7474/db/neo4j/tx/{txid}/commit",
+  "commit" : "http://{HOST}:7474/db/{dbname}/tx/{txid}/commit",
   "transaction" : {
     "expires" : "EXECUTION_DATE"
   }
 }
 ```
 
-The details of the a python request to call the Cypher transaction API are provides in [Graph API](./src/) source file.
+The details of the a python request to call the Cypher transaction API are provides in [Graph API](./src/graph_api.py) source file.
