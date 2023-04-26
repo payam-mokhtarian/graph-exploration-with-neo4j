@@ -62,7 +62,10 @@ Once the python application connects to the sandbox and create deriver, we can e
 
 
 ## Graph Analytics
-For any further exploration and analytics, we use graph data science (GraphDS) module and Bloom visualisation. To setup python application to connect for the GraphDS driver, we need the below module installation:
+For any further exploration and analytics, we use graph data science (GraphDS) module and Bloom visualisation. 
+
+### Prerequisites
+To setup python application to connect for the GraphDS driver, we need the below module installation:
 
 ```bash
 pip install graphdatascience
@@ -79,8 +82,52 @@ gds = GraphDataScience(host, auth=(user, password))
 gds.set_database("neo4j")
 ```
 
+### Graph Data Science
 
-gds = GraphDataScience(host, auth=(user, password))
-gds.set_database("neo4j")
+
+### Visual Analytics
+
 
 ## RESTfull API to Execute Cypher Queris
+Neo4j Developer API provides a series of HTTP edpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the detals to establish a Cypher transaction API:
+
+- **POST** `http://<HOST>:7474/db/<DBNAME>/tx`
+- **Accept:** `application/json;charset=UTF-8`
+- **Content-Type:** `application/json`
+
+As this is a POST request, it requires a body to post to the endpoint. For example, the format of the body is:
+
+```json
+{
+  "statements": [
+    {
+      "statement": "CREATE (n) RETURN n"
+    }
+  ]
+}
+```
+
+The expected result given `200: OK` response looks like:
+
+```json
+{
+  "results" : [ {
+    "columns" : [ "n" ],
+    "data" : [ {
+      "row" : [ { } ],
+      "meta" : [ {
+        "id" : 12,
+        "type" : "node",
+        "deleted" : false
+      } ]
+    } ]
+  } ],
+  "errors" : [ ],
+  "commit" : "http://{HOST}:7474/db/neo4j/tx/{txid}/commit",
+  "transaction" : {
+    "expires" : "EXECUTION_DATE"
+  }
+}
+```
+
+The details of the a python request to call the Cypher transaction API are provides in [Graph API](./src/) source file.
