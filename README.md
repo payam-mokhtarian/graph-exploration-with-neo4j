@@ -95,6 +95,8 @@ query = """
 MATCH (p:Person)-[HAS_CARD]->(c:Card)-[t:TRANSACTED]->(m:Merchant)
 RETURN SUM(toFloat(substring(t.amount,1))) AS total_amount, p.name AS person_name
 ORDER BY total_amount DESC;
+"""
+gds.run_cypher(query)
 ```
 
 and the result is:
