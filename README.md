@@ -92,34 +92,18 @@ There are a few summary statistics analysis in the [Graph Analytics](./src/). Ho
 
 ```python
 query = """
-MATCH (p:Person) -[TRAVELLED]-> (c:Country)
-RETURN count(c.name) AS number_of_trips, p.name AS person, c.name AS country;
-"""
-gds.run_cypher(query)
+MATCH (p:Person)-[HAS_CARD]->(c:Card)-[t:TRANSACTED]->(m:Merchant)
+RETURN SUM(toFloat(substring(t.amount,1))) AS total_amount, p.name AS person_name
+ORDER BY total_amount DESC;
 ```
 
 and the result is:
 
-|index|number_of_trips|person     |country    |
-|-----|---------------|-----------|-----------|
-|0    |1              |Anil Kumar |Canada     |
-|1    |1              |Anil Kumar |Thailand   |
-|2    |1              |Anil Kumar |New York   |
-|3    |1              |Anil Kumar |India      |
-|4    |1              |Anil Kumar |Vietnam    |
-|5    |1              |Anil Kumar |Tokyo      |
-|6    |1              |Alice Gan  |Malaysia   |
-|7    |1              |Alice Gan  |Vietnam    |
-|8    |1              |Alice Gan  |Philippines|
-|9    |1              |Alice Gan  |France     |
-|10   |1              |Alice Gan  |Belgium    |
-|11   |1              |Alice Gan  |London     |
-|12   |1              |Ariff Johan|Singapore  |
-|13   |1              |Ariff Johan|Korea      |
-|14   |1              |Ariff Johan|Vietnam    |
-|15   |1              |Ariff Johan|Hawaii     |
-|16   |1              |Ariff Johan|Dubai      |
-|17   |1              |Ariff Johan|Indonesia  |
+|index|total_amount|person_name|
+|-----|------------|-----------|
+|0    |3483.5100000000007|Alice Gan  |
+|1    |3391.0899999999997|Anil Kumar |
+|2    |2123.8099999999995|Ariff Johan|
 
 
 ### Visual Analytics
