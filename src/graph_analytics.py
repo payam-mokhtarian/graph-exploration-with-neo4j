@@ -28,10 +28,18 @@ gds.run_cypher(query)
 
 """## Analytics"""
 
+# Convert string amount to float and remove "$"
+query = """
+MATCH (c:Card)-[t:TRANSACTED]->(m:Merchant)
+SET t.amount = toFloat(substring(t.amount,1))
+RETURN t.amount;
+"""
+gds.run_cypher(query)
+
 # Persons with amount spending
 query = """
 MATCH (p:Person)-[HAS_CARD]->(c:Card)-[t:TRANSACTED]->(m:Merchant)
-RETURN SUM(toFloat(substring(t.amount,1))) AS total_amount, p.name AS person_name
+RETURN t.amount AS total_amount, p.name AS person_name
 ORDER BY total_amount DESC;
 """
 gds.run_cypher(query)
