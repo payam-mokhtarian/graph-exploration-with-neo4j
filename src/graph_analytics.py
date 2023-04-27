@@ -39,7 +39,7 @@ gds.run_cypher(query)
 # Persons with amount spending
 query = """
 MATCH (p:Person)-[HAS_CARD]->(c:Card)-[t:TRANSACTED]->(m:Merchant)
-RETURN t.amount AS total_amount, p.name AS person_name
+RETURN SUM(t.amount) AS total_amount, p.name AS person_name
 ORDER BY total_amount DESC;
 """
 gds.run_cypher(query)
