@@ -85,6 +85,41 @@ gds.set_database("neo4j")
 ```
 
 ### Graph Data Science
+Using Cyher query and `graphdatascinece` python module, we can exploer deeply into the relationships and extract mmeaningful pattern and summary statsitics.
+
+#### Cypher query foe EDA
+There are a few summary statistics analysis in the [Graph Analytics](./src/). However, below is an example on how to perform Cypher-query-based analysis:
+
+```python
+query = """
+MATCH (p:Person) -[TRAVELLED]-> (c:Country)
+RETURN count(c.name) AS number_of_trips, p.name AS person, c.name AS country;
+"""
+gds.run_cypher(query)
+```
+
+and the result is:
+
+|index|number_of_trips|person     |country    |
+|-----|---------------|-----------|-----------|
+|0    |1              |Anil Kumar |Canada     |
+|1    |1              |Anil Kumar |Thailand   |
+|2    |1              |Anil Kumar |New York   |
+|3    |1              |Anil Kumar |India      |
+|4    |1              |Anil Kumar |Vietnam    |
+|5    |1              |Anil Kumar |Tokyo      |
+|6    |1              |Alice Gan  |Malaysia   |
+|7    |1              |Alice Gan  |Vietnam    |
+|8    |1              |Alice Gan  |Philippines|
+|9    |1              |Alice Gan  |France     |
+|10   |1              |Alice Gan  |Belgium    |
+|11   |1              |Alice Gan  |London     |
+|12   |1              |Ariff Johan|Singapore  |
+|13   |1              |Ariff Johan|Korea      |
+|14   |1              |Ariff Johan|Vietnam    |
+|15   |1              |Ariff Johan|Hawaii     |
+|16   |1              |Ariff Johan|Dubai      |
+|17   |1              |Ariff Johan|Indonesia  |
 
 
 ### Visual Analytics
