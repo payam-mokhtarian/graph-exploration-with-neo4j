@@ -10,11 +10,11 @@ Original file is located at
 import requests
 import json
 
-HOST = ''
+HOST = 'http://3.236.93.178'
 PORT = '7474'
 ENDPOINT = '/db/neo4j/tx'
 USER = 'neo4j'
-PWD = ''
+PWD = 'growth-reservists-curves'
 
 url = HOST+':'+PORT+ENDPOINT
 print(url)
