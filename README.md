@@ -88,7 +88,7 @@ gds.set_database("neo4j")
 Using Cypher query and `graphdatascinece` python module, we can explore deeply into the relationships and extract meaningful pattern and summary statistics.
 
 #### Cypher query foe EDA
-There are a few summary statistics analysis in the [Graph Analytics](./src/). However, below is an example on how to perform Cypher-query-based analysis:
+There are a few summary statistics analysis in the [Graph Analytics](./src/graph_analytics.py). However, below is an example on how to perform Cypher-query-based analysis:
 
 ```python
 query = """
