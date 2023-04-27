@@ -108,7 +108,7 @@ and the result is:
 |2    |2123.8099999999995|Ariff Johan|
 
 #### Advanced analytics
-Using `gds`, we can run some data scince algorithem for further and deeper analysis. For example, we can run PageRank anlgorithm as a method for centrality analysis. It returns with scores that represent the nodes exposure. Below is an example to first create a graph data science projection then run the algorithm in N4o4j browser:
+Using `gds`, we can run some data scince algorithem for further and deeper analysis. For example, we can run PageRank anlgorithm as a method for centrality analysis. It returns with scores that represent the nodes exposure. Below is an example to first create a graph data science projection then run the algorithm in Neo4j browser:
 
 ```cypher
 CALL gds.graph.create.cypher(
@@ -123,7 +123,11 @@ RETURN gds.util.asNode(nodeId).name AS name, score;
 ```
 
 ### Visual Analytics
+We can also drive more insighta and perform data science algorithem within [Bloom](https://neo4j.com/product/bloom/), a visualition platform for Neo4j. The platform runs within the same sandbox and same credentials. Once, it's launched, we need to select the database (`neo4j`) and using *Create* button generate perspective of the graph. It then retuns perspectives with categories and relationship.
 
+To visualise the relationship, we can use *Search graph* to pick nodes and relationship. For example, below shows the relationship between persons how studied a course at an institute:
+
+![Bloom Visualisation](./images/bloom_visualisation.png)
 
 ## RESTfull API to Execute Cypher Queries
 Neo4j Developer API provides a series of HTTP endpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the details to establish a Cypher transaction API:
