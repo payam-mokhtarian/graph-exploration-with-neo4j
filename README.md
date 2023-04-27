@@ -107,6 +107,20 @@ and the result is:
 |1    |3391.0899999999997|Anil Kumar |
 |2    |2123.8099999999995|Ariff Johan|
 
+#### Advanced analytics
+Using `gds`, we can run some data scince algorithem for further and deeper analysis. For example, we can run PageRank anlgorithm as a method for centrality analysis. It returns with scores that represent the nodes exposure. Below is an example to first create a graph data science projection then run the algorithm in N4o4j browser:
+
+```cypher
+CALL gds.graph.create.cypher(
+    'interactions',
+    'MATCH (p:Person) RETURN id(p) AS id',
+    'MATCH (p:Person)-[t:TRAVELLED]->(c:Country) RETURN id(p) AS source, id(c) AS target, t AS travelled'
+);
+
+CALL gds.pageRank.strea('interactions')
+YIELD nodeId, score
+RETURN gds.util.asNode(nodeId).name AS name, score;
+```
 
 ### Visual Analytics
 
