@@ -129,6 +129,10 @@ To visualise the relationship, we can use *Search graph* to pick nodes and relat
 
 ![Bloom Visualisation](./images/bloom_visualisation.png)
 
+In Bloom, we can apply data science algorithm like community detection or centrality. For example, below shows a centrality analysis for person who travelled to coutries. It gives more weight (node size) to the countries given the amount of travel to them:
+
+![Bloom Centrality](./images/bloom_centrality.png)
+
 ## RESTfull API to Execute Cypher Queries
 Neo4j Developer API provides a series of HTTP endpoint that allows to perform several actions using Cypher transaction. Using the Connection Details provided in the Neo4j sandbox, we can create an HTTP endpoint host with basic authentication. Below are the details to establish a Cypher transaction API:
 
