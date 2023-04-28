@@ -15,7 +15,7 @@ The first step prior to create an ingestion pipeline is to understand data model
 
 ![Graph Data Model](./data_model/graph_data_model.png)
 
-The details of the visual data model is available in this [link](https://arrows.app/#/local/id=1Lb2VC1gtOfrXMYKSvf8). We can also export the data model as a JSON file. Here is the exported data model [file](./data_model/graph_data_model.josn) in JSON.
+The details of the visual data model is available in this [link](https://arrows.app/#/local/id=1Lb2VC1gtOfrXMYKSvf8). We can also export the data model as a JSON file. Here is the exported data model [file](./data_model/graph_data_model.json) in JSON.
 
 ## Data Ingestion to a Graph
 
