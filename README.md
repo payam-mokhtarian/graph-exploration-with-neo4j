@@ -58,7 +58,7 @@ session = driver.session(database="neo4j") # default database
 ```
 
 #### Data Ingestion
-Once the python application connects to the sandbox and create deriver, we can execute Cypher queries that load CSV files from the urls to the selected database in the sandbox. The details of creating constraints, index and load statement are in the [Graph Ingestion](./src/graph_ingestion.ipynb) source files and notebooks.
+Once the python application connects to the sandbox and create deriver, we can execute Cypher queries that load CSV files from the urls to the selected database in the sandbox. The details of creating constraints, index and load statement are in the [Graph Ingestion](./src/graph_ingestion.py) source files and notebooks.
 
 
 ## Graph Analytics
