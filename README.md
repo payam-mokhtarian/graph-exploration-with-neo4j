@@ -127,7 +127,7 @@ We can also drive more insights and perform data science algorithm within [Bloom
 
 To visualise the relationship, we can use *Search graph* to pick nodes and relationship. For example, below shows the relationship between persons how studied a course at an institute:
 
-![Bloom Visualisation](./images/bloom_visualisation.png)
+![Bloom Visualisation](./images/bloom_visualisation.png, "Graph representation of persons how studied a course at an institute.)
 
 In Bloom, we can apply data science algorithm like community detection or centrality. For example, below shows a centrality analysis for person who travelled to coutries. It gives more weight (node size) to the countries given the amount of travel to them:
 
